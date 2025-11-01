@@ -1,46 +1,124 @@
-# Getting Started with Create React App
+🎵 SoundScape – Music Mood Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern full-stack web app that recommends music based on your mood and weather.
+Built for the SDE Intern (Frontend) 36-hour assessment challenge.
 
-## Available Scripts
+🚀 Features
 
-In the project directory, you can run:
+🎧 Music Recommendations – powered by Deezer (via RapidAPI)
 
-### `npm start`
+🌤 Weather-Aware Moods – detects your location’s weather and suggests playlists
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+❤️ Favorites System – save and view favorite tracks anytime
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+🌙 Light / Dark Mode Toggle
 
-### `npm test`
+📱 Responsive Design – optimized for mobile and desktop with smooth transitions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+⚡ State Management via Zustand
 
-### `npm run build`
+🌀 Smooth Animations using Framer Motion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🛠 Tech Stack
+Layer	Technology
+Frontend	React, TypeScript, TailwindCSS, Zustand, Framer Motion
+Backend	Node.js, Express, TypeScript
+APIs	OpenWeatherMap API, Deezer API (via RapidAPI)
+Other Tools	Axios, Lucide Icons, Vite
+⚙️ Setup Instructions
+1️⃣ Clone the repository
+git clone <your-repo-url>
+cd soundscape
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2️⃣ Setup the Backend
+cd backend
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Create a .env file inside /backend:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+PORT=5000
+OPENWEATHER_API_KEY=your_openweather_api_key
+RAPIDAPI_KEY=your_rapidapi_key
+RAPIDAPI_HOST=deezerdevs-deezer.p.rapidapi.com
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Then run:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+npm run dev
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✅ You should see:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Server running on port 5000
+
+3️⃣ Setup the Frontend
+cd ../frontend
+npm install
+npm run dev
+
+
+Visit → http://localhost:5173
+
+🌈 How It Works
+
+The app fetches your current weather using OpenWeather API.
+
+It determines your mood (e.g., chill, happy, lofi, calm).
+
+It fetches recommended tracks from Deezer API based on that mood.
+
+You can play previews, mark favorites, and toggle themes.
+
+🧠 Folder Structure
+soundscape/
+│
+├── backend/
+│   ├── src/
+│   │   ├── routes/
+│   │   │   ├── weatherRoutes.ts
+│   │   │   └── musicRoutes.ts
+│   │   └── server.ts
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── store/
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── package.json
+│   └── vite.config.ts
+│
+└── README.md
+
+
+⚡ Environment Variables
+
+Variable	Description
+PORT	Backend server port
+OPENWEATHER_API_KEY	API key from OpenWeatherMap
+
+RAPIDAPI_KEY	API key from RapidAPI – Deezer
+
+RAPIDAPI_HOST	Default: deezerdevs-deezer.p.rapidapi.com
+
+💡 Future Enhancements
+
+🎵 Integrate Spotify API for full-length tracks
+
+📍 Add manual location selection
+
+🧠 Use AI-based sentiment analysis for mood detection
+
+👨‍💻 Author
+
+Som Kumar Pawar
+📍 India
+💼 Aspiring Full-Stack Developer
+
+🏁 Conclusion
+
+SoundScape is a sleek, responsive web app that merges music, mood, and weather to create a unique experience.
+It showcases API integration, state management, and frontend excellence — ideal for a frontend SDE assessment submission.
