@@ -122,3 +122,7 @@ Som Kumar Pawar
 
 SoundScape is a sleek, responsive web app that merges music, mood, and weather to create a unique experience.
 It showcases API integration, state management, and frontend excellence — ideal for a frontend SDE assessment submission.
+
+## 🌐 Live Demo
+Frontend: [https://soundscape-mood-app.vercel.app](https://soundscape-mood-app.vercel.app)  
+Backend: [https://soundscape-mood-app.onrender.com](https://soundscape-mood-app.onrender.com)
