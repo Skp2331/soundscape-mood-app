@@ -70,7 +70,8 @@ export const useSoundScapeStore = create(
       // 🌦 Weather-based mood fetch
       fetchWeatherMood: async () => {
         try {
-          const res = await axios.get("https://soundscape-mood-app.onrender.com/api/weather");
+          const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/weather`);
+
           const mood = res.data.mood || "chill";
           console.log("🎵 Weather-based mood:", mood);
           await get().fetchMusic(mood);
@@ -82,7 +83,7 @@ export const useSoundScapeStore = create(
       // 🎵 Music fetch
       fetchMusic: async (mood) => {
         try {
-         const res = await axios.get(`https://soundscape-mood-app.onrender.com/api/music?mood=${mood}`);
+         const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/music?mood=${mood}`);
 
           if (res.data && res.data.length > 0) {
             set({
